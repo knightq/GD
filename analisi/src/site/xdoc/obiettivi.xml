@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
+<document> 
+  <properties>
+    <title>Obiettivi</title>
+    <author email="asalicetti@kion.it">Andrea Salicetti</author>
+  </properties>
+  <body>
+    <section name="Obiettivi">
+		<p>
+ 			L'intervento di analisi si propone di definire:
+			<ul>
+				<li>Fattibilità.</li>
+				<li>Costi differenziali.</li>
+				<li>Tempi.</li>
+				<li>Rischi.</li>
+				<li>Pro e contro.</li>
+			</ul>
+			della opzione <i>make</i> con infrastruttura Rails nel contesto di scelta <i>make or buy</i> circa l'adozione di un sistema informatico di gestione documentale.
+		</p>
+    </section>
+  </body>
+</document>

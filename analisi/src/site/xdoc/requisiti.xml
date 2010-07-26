@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
+<document> 
+  <properties>
+    <title>Requisiti</title>
+    <author email="asalicetti@kion.it">Andrea Salicetti</author>
+  </properties>
+  <body>
+    <section name="Requisiti">
+<p>
+	L’esigenza principale consiste nella possibilità di implementare una gestione di documenti.<br/>
+	I documenti dovranno essere editabili dalle persone di Kion direttamente dal Kim e dovranno essere presentati agli utenti come pagine html.
+</p>
+		<subsection name="Inserimento, modifica e cancellazione documenti">
+			E’ indispensabile creare una maschera che permetta ai redattori la gestione in modo agevole dei documenti. La maschera dovrebbe prevedere due modalità di utilizzo:
+			<ol>
+				<li><b>Edit inline</b><br/>
+					<p>
+						 L’edit diretto dal Kim non necessita di tutte le possibilità presentate in figura ma basta avere:
+						 <ul>
+						 	<li>Grassetto</li>
+							<li>Corsivo</li>
+							<li>Liste puntate</li>
+							<li>Immagini</li>
+							<li>Stili di paragrafo (titolo 1, titolo2 ecc)</li>
+							<li>link</li>
+							<li>tabelle semplici</li>
+						</ul>
+					</p>
+				</li>
+				<li><b>Importazione di documenti esistenti</b><br/>
+				<p>L’edit inline è una modalità di utilizzo comoda per creare dei documenti piccoli (per esempio le faq) ma rende difficile la gestione di documenti complessi (per esempio i documenti di processo). Per questo motivo, è necessario avere la possibilità di importare dei documenti (word/pdf) per permettere ai redattori la possibilità di creare i documenti offline e, una volta terminato, fare l’upload del documento che sarà convertito nella sintassi richiesta dal KIM.
+Data l’elevata differenza tra i formati word/pdf e il formato html è accettabile immaginare che, almeno nella fase iniziale, l’import dei documenti complessi sia effettuato manualmente da un operatore che effettuerà anche un controllo sul risultato finale.
+Per i documenti più semplici (per esempio l’help associato ai messaggi di Esse3), è necessario implementare un servizio (web service?) che permetta di alimentare il sistema dall’esterno.</p></li>
+			</ol>
+		</subsection>
+		<subsection name="Tagging dei documenti">
+			<p>Per ogni documento è necessario poter definire diverse modalità di classificazione.</p>
+			<p>Le classificazioni individuate finora sono:
+				<ul>
+					<li>processo/i di appartenenza – permette di creare un’associazione tra un documento e uno o più processi;</li>
+					<li>tipologia di documento – per esempio: manuale, documento di processo, faq, howto ecc;</li>
+					<li>soluzioni/howto/help online – è una classificazione che deve permettere di associare ad un messaggio applicativo di Esse3 uno o più documenti gestiti dalla knowledge base;</li>
+					<li>altri tag a scelta del redattore – in questo caso un tag è un insieme di parole (per esempio posso associare un documento ad una versione di Esse3);</li>
+				</ul>
+			</p>
+			Tipologia
+			Messaggi Esse3
+			Documenti
+			Processi
+			Altri Tag liberi
+		</subsection>
+		<subsection name="Navigazione della Knowledge base">
+			<subsection name="Ricerca">
+				Una delle principali modalità di accesso è tramite la maschera di ricerca descritta in questo documento. I risultati ottenuti devono essere filtrabili per:
+				<ul>
+					<li>processo</li>
+					<li>tipologia</li>
+				</ul>
+			</subsection>
+			<subsection name="Navigazione dei documento di processo">
+				I documenti di processo devono essere accessibili anche tramite navigazione per Area processo. Quindi, a partire dal Menu, è necessario modificare il link “Documenti” affinché permetta di raggiungere un documento di processo (in uno o più passaggi).
+			</subsection>
+			<subsection name="Navigazione da messaggio di Esse3">
+				Deve essere possibile risalire ai documenti a partire da messaggi di ESSE3.
+			</subsection>
+		</subsection>
+    </section>
+  </body>
+</document>

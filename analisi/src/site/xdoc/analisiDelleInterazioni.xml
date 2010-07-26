@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
+<document> 
+  <properties>
+    <title>Analisi delle interazioni</title>
+    <author email="asalicetti@kion.it">Andrea Salicetti</author>
+  </properties>
+  <body>
+    <section name="Analisi delle interazioni">
+      </section>
+  </body>
+</document>

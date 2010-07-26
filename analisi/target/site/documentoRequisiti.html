@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>AN01_PatternTab - Descrizione dei requisiti</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+          <meta name="author" content="Andrea Salicetti" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      </head>
+  <body class="composite">
+    <div id="banner">
+                    <span id="bannerLeft">
+    
+            Gestione Documentale
+    
+            </span>
+                    <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+    
+            <div class="xleft">
+        Ultima Pubblicazione: 2010-07-26
+                      </div>
+            <div class="xright">            <a href="http://siaweb.kion.it:8887/sia-pr/" class="externalLink">Ambiente di test su HEAD</a>
+            
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+  
+  
+    
+                   <h5>Workflow</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="index.html">Introduzione</a>
+          </li>
+              
+    <li class="none">
+                    <a href="visione.html">Visione</a>
+          </li>
+              
+    <li class="none">
+                    <a href="obiettivi.html">Obiettivi</a>
+          </li>
+              
+                
+              
+            
+            
+      
+            
+      
+            
+      
+              
+            <li class="expanded">
+                    <a href="requisiti.html">Requisiti</a>
+                  <ul>
+                  
+    <li class="none">
+              <strong>Descrizione</strong>
+        </li>
+                  
+    <li class="none">
+                    <a href="glossarioRequisiti.html">Glossario</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="casiUsoScenari.html">Casi di uso e scenari</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="requisitiNonFunzionali.html">RequisitiNonFunzionali</a>
+          </li>
+              </ul>
+        </li>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+                    
+        <li class="collapsed">
+                    <a href="analisi.html">Analisi</a>
+                </li>
+              
+    <li class="none">
+                    <a href="pianoDiLavoro.html">Piano di lavoro</a>
+          </li>
+              
+    <li class="none">
+                    <a href="pianoCollaudo.html">Piano del collaudo</a>
+          </li>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+                    
+        <li class="collapsed">
+                    <a href="progetto.html">Progetto</a>
+                </li>
+              
+    <li class="none">
+                    <a href="implementazione.html">Deployment</a>
+          </li>
+              
+    <li class="none">
+                    <a href="esecuzione.html">Esecuzione</a>
+          </li>
+          </ul>
+              <h5>Code</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="xref/index.html">Sorgenti</a>
+          </li>
+              
+    <li class="none">
+                    <a href="xref-test/index.html">Sorgenti dei test</a>
+          </li>
+              
+    <li class="none">
+                    <a href="dependencies.html">Dipendenze</a>
+          </li>
+          </ul>
+              <h5>Report</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="apidocs/index.html">JavaDocs</a>
+          </li>
+              
+    <li class="none">
+                    <a href="junit-report/surefire-report.html">JUnit Report</a>
+          </li>
+          </ul>
+              <h5>Workers</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="team-list.html">Team</a>
+          </li>
+          </ul>
+                                           <a href="http://maven.apache.org/" title="Costruito da Maven" class="poweredBy">
+            <img alt="Costruito da Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+  
+  
+    
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <div class="section"><h2><a name="Descrizione_dei_requisiti"></a>
+Descrizione dei requisiti</h2>
+<p>
+			Progettare un pattern e realizzarne una implementazione per il caso specifico della funzione Nuova Programmazione Didattica che permetta di astrarre la gestione degli aggiornamenti dell'interfaccia utente fra porzioni di maschera visibili in mutua esclusione all'interno di un unico Business Process. 
+ 		</p>
+<p>
+			Il pattern deve garanalisitire le seguenti invarianalisiti:
+			<ol type="1"><li>Ogni elemento della maschera (dettaglio di modello, stato di un pulsanalisite, cardinalitï¿½ di un datamodel, ...) puï¿½ essere sensibile a eventi che intercorrono su modelli di controller diversi dal corrente e che gestiscono un tab differente da quello degli elementi in questione.</li>
+<li>L'aggiornamento dell'interfaccia a seguito del verificarsi di un evento scatenanalisite deve essere:
+					<ol type="1"><li><b>Garanalisitita sull'interfaccia</b>
+: non ï¿½ necessaria una interazione <i>sincrona</i>
+ tra evento e aggiornamento, purchï¿½ sia garanalisitito il fatto che, 
+						      nel momento in cui l'utente si ritrova visualizzata la porzione di maschera oggetto dell'aggiornamento.</li>
+<li><b>Automatica</b>
+: ossia indipendente da ulteriori azioni utente, al di fuori di quelle che hanalisino scatenato l'evento.</li>
+<li><b>Invarianalisite rispetto ai modelli</b>
+: l'aggiornamento deve riguardare esclusivamente le singole prozioni di maschera bersaglio dell'aggiornamento.
+						In particolare un aggiornamento non deve modificare l'insieme dei modelli precedentemente presentati all'utente, se non limitatamente a quelli direttamente legati all'evento.</li>
+</ol>
+</li>
+<li>L'evento deve poter essere causato da Business Process esterni a quello da aggiornare.</li>
+</ol>
+</p>
+</div>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2010
+    
+          
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

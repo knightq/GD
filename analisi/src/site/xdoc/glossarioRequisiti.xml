@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
+<document> 
+  <properties>
+    <title>Glossario</title>
+    <author email="asalicetti@kion.it">Andrea Salicetti</author>
+  </properties>
+  <body>
+    <section name="Glossario">
+		<p>
+ 		</p>
+		
+                <subsection name="Significato dei termini">
+                <table border="1" width="100%" id="table2">
+                    <thead>
+                        <th width="25%">
+                            <p align="center">
+                                     <b>TERMINE</b>
+                             </p>
+                        </th>
+                        <th>
+                            <p align="center">
+                                     <b>SIGNIFICATO</b>
+                             </p>
+                        </th>
+                    </thead>
+                    <tr>
+                        <td align="justify" width="25%">... </td>
+                        <td align="justify">
+			...	                       
+			</td>
+                    </tr>
+                </table>
+            </subsection>
+
+
+
+    </section>
+  </body>
+</document>

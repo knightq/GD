@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
+<document> 
+  <properties>
+    <title>Descrizione dei requisiti</title>
+    <author email="asalicetti@kion.it">Andrea Salicetti</author>
+  </properties>
+  <body>
+    <section name="Descrizione dei requisiti">
+		<p>
+			Progettare un pattern e realizzarne una implementazione per il caso specifico della funzione Nuova Programmazione Didattica che permetta di astrarre la gestione degli aggiornamenti dell'interfaccia utente fra porzioni di maschera visibili in mutua esclusione all'interno di un unico Business Process. 
+ 		</p>
+		<p>
+			Il pattern deve garanalisitire le seguenti invarianalisiti:
+			<ol>
+				<li>Ogni elemento della maschera (dettaglio di modello, stato di un pulsanalisite, cardinalit� di un datamodel, ...) pu� essere sensibile a eventi che intercorrono su modelli di controller diversi dal corrente e che gestiscono un tab differente da quello degli elementi in questione.</li>
+				<li>L'aggiornamento dell'interfaccia a seguito del verificarsi di un evento scatenanalisite deve essere:
+					<ol>
+						<li><b>Garanalisitita sull'interfaccia</b>: non � necessaria una interazione <i>sincrona</i> tra evento e aggiornamento, purch� sia garanalisitito il fatto che, 
+						      nel momento in cui l'utente si ritrova visualizzata la porzione di maschera oggetto dell'aggiornamento.</li>
+						<li><b>Automatica</b>: ossia indipendente da ulteriori azioni utente, al di fuori di quelle che hanalisino scatenato l'evento.</li>
+						<li><b>Invarianalisite rispetto ai modelli</b>: l'aggiornamento deve riguardare esclusivamente le singole prozioni di maschera bersaglio dell'aggiornamento.
+						In particolare un aggiornamento non deve modificare l'insieme dei modelli precedentemente presentati all'utente, se non limitatamente a quelli direttamente legati all'evento.</li>
+					</ol>
+				</li>
+				<li>L'evento deve poter essere causato da Business Process esterni a quello da aggiornare.</li>
+			</ol>
+		</p>
+    </section>
+  </body>
+</document>

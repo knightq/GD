@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
+<document> 
+  <properties>
+    <title>Casi d'uso</title>
+    <author email="asalicetti@kion.it">Andrea Salicetti</author>
+  </properties>
+  <body>
+    <section name="Casi d'uso e scenari">
+
+ 
+    <subsection name="Casi d'uso">
+    <p>
+    </p>
+    </subsection>
+            
+            <subsection name="Scenari">            
+            <table>
+                    <thead>
+                        <th width="25%"><strong>Campo</strong></th>
+                        <th><strong>Descrizione</strong></th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><b>Nome</b></td>
+                        <td>ID (univoco)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Descrizione</b></td>
+                        <td>
+                        	 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Attori</b></td>
+                        <td> 
+                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Precondizioni</b></td>
+                        <td>
+                        	 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Scenario principale</b></td>
+                        <td>
+                         	 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Scenari alternativi</b></td>
+                        <td> 
+                        	 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Postcondizioni</b></td>
+                        <td>
+                        	 
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+              </subsection>
+              
+	</section>
+
+  </body>
+</document>

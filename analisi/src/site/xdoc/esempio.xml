@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
+<document> 
+  <properties>
+    <title>Pagina di esempio</title>
+    <author email="natali-didattica@deis.unibo.it">Antonio Natali</author>
+  </properties>
+  <body>
+    <section name="Liste">
+		<p>
+			Alcuni esempi di liste.
+		</p>
+		<subsection name="Lista Ordered">
+			<p>
+				<ol>
+					<li>Prima riga</li>
+					<li>Seconda riga</li>
+					<li>Terza riga</li>
+				</ol>
+			</p>
+		</subsection>
+		<subsection name="Lista Unordered">
+			<p>
+				<ul>
+					<li>Prima riga</li>
+					<li>Seconda riga</li>
+					<li>Terza riga</li>
+				</ul>
+			</p>
+		</subsection>
+    </section>
+    <section name="Link">
+		<p>
+			Alcuni esempi di utilizzo dei link.
+		</p>
+		<subsection name="Links senza aprire una nuova finestra">
+			<p>
+				<a href="junit-report.html">Report di JUnit</a>
+			</p>
+			<p>
+				<a href="dependencies.html">Dipendenze del progetto</a>
+			</p>
+			<p>
+				<a href="http://maven.apache.org/">
+					http://maven.apache.org
+				</a>
+			</p>
+		</subsection>
+		<subsection name="Links che aprono una nuova finestra">
+			<p>
+				<a href="http://www-natali.deis.unibo.it/" target="_blanalisik">
+					http://www-natali.deis.unibo.it
+				</a>
+			</p>
+			<p>
+				<a href="http://maven.apache.org/" target="_blanalisik">
+					http://maven.apache.org
+				</a>
+			</p>
+		</subsection>
+    </section>
+    <section name="Immagini">
+		<p>
+			Esempio di gestione delle immagini.
+		</p>
+		<subsection name="Immagine non centrata">
+			<p>
+				<img src="images/logo-unibo.gif" alt="logo-unibo"/>
+			</p>
+		</subsection>
+		<subsection name="Immagine centrata">
+			<p style="text-align: center">
+				<img src="images/logo-unibo.gif" alt="logo-unibo"/>
+			</p>
+		</subsection>
+    </section>
+    <!-- section name="Altri elementi">
+    	<fixme>
+    		testo contenuto nell'elemento <code>fixme</code>
+    	</fixme>
+    	<note>
+    		testo contenuto nell'elemento <code>note</code>
+    	</note>
+    	<warning>
+    		testo contenuto nell'elemento <code>warning</code>
+    	</warning>
+    </section -->
+  </body>
+</document>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
+<document> 
+  <properties>
+    <title>Analisi del problema</title>
+    <author email="asalicetti@kion.it">Andrea Salicetti</author>
+  </properties>
+  <body>
+    <section name="Analisi del problema">
+ 		<subsection name="Raccomanalisidazione">
+			<p>
+				Si ricorda che l'analisialisi del problema non � la descrizione della
+				soluzione. L'analisialisi del problema pu� al pi� suggerire una o pi�
+				architetture logiche in grado di dare buone basi alla risoluzione
+				del problema stesso, promuovere lo sviluppo di una soluzione 
+				modulare e agevolare una pianalisiificazione del lavoro adeguata ai
+				vincoli temporali con cui produrre le diverse versioni del
+				sistema. 
+			</p>
+		</subsection>
+		<subsection name="Dominio">
+			<p>
+				Il U-GOV � implementato un pattern MVC per la gestione dell'interfaccia utente, in cui:
+				<ul>
+					<li><b>M</b>odel: Javabeanalisis direttamente o indirettamente legati a classi persistenti di backend.</li>
+					<li><b>V</b>iew: layer JSF / Facelets.</li>
+					<li><b>C</b>ontroller: implementazioni di IController (come l'MDDController).</li>
+				</ul>
+			</p>
+		</subsection>
+		<subsection name="Analisi dei requisiti">
+			<p>
+				<font color="red"><b>Vincolanalisiti</b></font> / <font color="blue"><b>Non vincolanalisiti</b></font>:
+				<ol>
+					<li><font color="blue"><b>Garanalisitita sull'interfaccia</b></font>: non � necessaria una interazione <i>sincrona</i> tra evento e aggiornamento, purch� sia garanalisitito il fatto che, 
+					      nel momento in cui l'utente si ritrova visualizzata la porzione di maschera oggetto dell'aggiornamento. <br/>
+					      <div>La reazione </div></li>
+					<li><b>Automatica</b>: ossia indipendente da ulteriori azioni utente, al di fuori di quelle che hanalisino scatenato l'evento.</li>
+					<li><font color="red"><b>Invarianalisite rispetto ai modelli</b></font>: l'aggiornamento deve riguardare esclusivamente le singole prozioni di maschera bersaglio dell'aggiornamento.
+					In particolare un aggiornamento non deve modificare l'insieme dei modelli precedentemente presentati all'utente, se non limitatamente a quelli direttamente legati all'evento.</li>
+				</ol>
+			</p>
+		</subsection>
+	</section>
+  </body>
+</document>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
+<document> 
+  <properties>
+    <title>Implementazione</title>
+    <author email="asalicetti@kion.it">Andrea Salicetti</author>
+  </properties>
+  <body>
+    <section name="Distribuzione">
+		<p>
+ 		</p>
+	<subsection name="Note implementative">
+ 	</subsection>
+</section>
+  </body>
+</document>

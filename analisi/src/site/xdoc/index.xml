@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
+<document>
+    <properties>
+        <title>
+            Introduzione
+        </title>
+        <author email="asalicetti@kion.it">
+            Andrea Salicetti
+        </author>
+    </properties>
+    <body>
+        <section name="Introduzione">
+            <p>
+                Questo documento è il prodotto dello studio di analisi per il progetto di Gestione Documentale.
+            </p>
+        </section>
+    </body>
+</document>

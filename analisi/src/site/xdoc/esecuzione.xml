@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
+<document> 
+  <properties>
+    <title>Esecuzione</title>
+    <author email="asalicetti@kion.it">Andrea Salicetti</author>
+  </properties>
+  <body>
+    <section name="Demo">
+		<p>
+<!--		
+<APPLET code="es01.Applic1" archive="../../../lib/es01.jar",width="650" height="400" />
+-->
+		</p>
+    </section>
+  </body>
+</document>

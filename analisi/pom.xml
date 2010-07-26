@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>it.kion.sia.siadi.gd</groupId>
+  <artifactId>analisi</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <packaging>jar</packaging>
+  <name>Gestione Documentale</name>
+  <url>http://ugov-ruby.kion.it/</url>
+  <inceptionYear>2010</inceptionYear>
+
+  <developers>
+    <developer>
+      <name>Andrea Salicetti</name>
+      <email>asalicetti@kion.it</email>
+      <organization>KION S.p.a.</organization>
+      <organizationUrl>http://www.kion.it</organizationUrl>
+      <roles>
+        <role>software engineer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <configuration>
+          <outputDirectory>${project.build.directory}/site/junit-report</outputDirectory>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>2.0-beta-6</version>
+        <configuration>
+          <locales>it,en</locales>
+        </configuration>
+      </plugin>
+    </plugins>
+
+    <extensions>
+      <!-- Enabling the use of FTP -->
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+         <artifactId>wagon-ssh-external</artifactId>
+         <version>1.0-beta-6</version>
+      </extension>
+    </extensions>
+  </build>
+
+  <distributionManagement>
+    <repository>
+	  <id>ssh-repository</id>
+      <url>scp://asalicetti@siaweb.kion.it</url>
+    </repository>
+  </distributionManagement>
+
+  <profiles>
+   <profile>
+     <id>src</id>
+     <build>
+       <plugins>
+         <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-assembly-plugin</artifactId>
+           <configuration>
+             <descriptor>src/main/assembly/assembly-src.xml</descriptor>
+           </configuration>
+         </plugin>
+       </plugins>
+     </build>
+     <activation>
+  	   <property>
+  		 <name>src</name>
+  	   </property>
+     </activation>
+   </profile>
+   <profile>
+     <id>docs</id>
+     <build>
+       <plugins>
+         <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-assembly-plugin</artifactId>
+           <configuration>
+             <descriptor>src/main/assembly/assembly-docs.xml</descriptor>
+           </configuration>
+         </plugin>
+       </plugins>
+     </build>
+     <activation>
+  	   <property>
+  	 	 <name>docs</name>
+  	   </property>
+     </activation>
+   </profile>
+  </profiles>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>dependencies</report>
+              <report>project-team</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jxr-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <configuration>
+          <inputEncoding>utf-8</inputEncoding>
+          <outputEncoding>utf-8</outputEncoding>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>

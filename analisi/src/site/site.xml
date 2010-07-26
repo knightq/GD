@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="AN01_PatternTab">
+
+  <banalisinerLeft>
+    <name>U-GOV Didattica</name>
+    <src>images/logo.gif</src>
+    <href>http://siaweb.kion.it:8887/sia-pr/</href>
+  </banalisinerLeft>
+
+    <body>
+        <links>
+            <item name="Ambiente di test su HEAD" href="http://siaweb.kion.it:8887/sia-pr/"/>
+        </links>
+        <menu name="Workflow">
+            <item name="Introduzione" href="/index.html"/>
+            <item name="Visione" href="/visione.html"/>
+            <item name="Obiettivi" href="/obiettivi.html"/>
+            <item name="Requisiti" href="/requisiti.html" collapse="true">
+             		<item name="Descrizione" href="/documentoRequisiti.html"/>
+             		<item name="Glossario" href="/glossarioRequisiti.html"/>
+             		<item name="Casi di uso e scenari" href="/casiUsoScenari.html"/>
+             		<item name="RequisitiNonFunzionali" href="/requisitiNonFunzionali.html"/>            
+            </item>
+            <item name="Analisi" href="/analisi.html" collapse="true">
+             		<item name="Analisi del problema" href="/analisiDelProblema.html"/>
+             		<item name="Architettura logica" href="/architetturaLogica.html" collapse="true">
+            			<item name="Struttura" href="/analisiDellaStruttura.html"/>
+            			<item name="Comportamento" href="/analisiDelComportamento.html"/>
+            			<item name="Interazioni" href="/analisiDelleInterazioni.html"/>
+            		</item>
+            </item>
+           
+            <item name="Piano di lavoro" href="/pianoDiLavoro.html"/>
+            <item name="Piano del collaudo" href="/pianoCollaudo.html"/>
+            <item name="Progetto" href="/progetto.html" collapse="true">
+            	<item name="Scelte" href="/alberoDecisioni.html"/>
+                <item name="Pattern individuati" href="/pattern.html"/>
+             		<item name="Architettura" href="/architettura.html" collapse="true">
+                		<item name="Struttura" href="/strutturaDelSistema.html"/>
+                		<item name="Comportamento" href="/comportamentoDelSistema.html"/>
+                		<item name="Interazione" href="/interazione.html"/>
+            		</item>
+            </item>
+            <item name="Deployment" href="/implementazione.html"/>
+            <item name="Esecuzione" href="/esecuzione.html"/>
+        </menu>
+		<menu name="Code">
+            <item name="Sorgenti" href="/xref/index.html" target="_blanalisik"/>
+            <item name="Sorgenti dei test" href="/xref-test/index.html" target="_blanalisik"/>
+            <item name="Dipendenze" href="/dependencies.html"/>
+        </menu>
+		<menu name="Report">
+			<item name="JavaDocs" href="/apidocs/index.html"/>
+            <item name="JUnit Report" href="/junit-report/surefire-report.html"/>
+		</menu>
+	<menu name="Workers">
+            <item name="Team" href="/team-list.html"/>
+	</menu>
+    </body>
+</project>
+
+<!--
+mvn -o javadoc:javadoc
+mvn -o jxr:jxr
+mvn -o jxr:test-jxr 
+mvn -o test
+mvn -o surefire-report:report
+mvn -o site
+
+mvn -o assembly:assembly
+
+mvn clover:instrument
+mvn clover:check -DtargetPercentage=50%
+mvn clover:clover
+
+mvn clover:instrument clover:clover
+
+Per installare in c:\repo la risorsa:
+ mvn install:install-file -DgroupId=uniboEnv -DartifactId=demo -Dversion=1.1-SNAPSHOT -Dpackaging=jar -Dfile=/target/demo-1.0-SNAPSHOT.jar
+
+
+Dopo il comanalisido mvn eclipse:eclipse:
+
+       Sources for some artifacts are not available.
+       Please run the same goal with the -DdownloadSources=true parameter in order to check re
+       List of artifacts without a source archive:
+         o uniboEnv:demo:1.1-SNAPSHOT
+         o woodstox:wstx-asl:2.9.3
+         o ws-commons:neethi:1.0.1
+         o uniboEnv:uniboEnv-wiring:1.1-SNAPSHOT
+         o ws-commons:axiom-impl:1.0
+         o stax:stax-api:1.0
+         o uniboEnv:uniboEnv-base:1.1-SNAPSHOT
+         o commons-logging:commons-logging:1.0.4
+         o xmlbeanalisis:xbeanalisi:2.1.0
+         o commons-codec:commons-codec:1.3
+         o commApiWin32:comm:1.0
+         o commApiWin32:bluecove:1.0
+         o org.apache.ws.commons:XmlSchema:1.0.2
+         o ws-commons:axiom-api:1.0
+         o 2p:2pslim:1.3
+         o log4j:log4j:1.2.13
+         o commons-httpclient:commons-httpclient:3.0
+         o junit:junit:3.8.1
+         o wsdl4j:wsdl4j:1.5.2
+         o axis2:axis2-kernel:1.0
+         o backport-util-concurrent:backport-util-concurrent:2.1
+
+-->

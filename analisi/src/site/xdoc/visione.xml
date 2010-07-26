@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
+<document> 
+  <properties>
+    <title>Visione</title>
+    <author email="asalicetti@kion.it">Andrea Salicetti</author>
+  </properties>
+  <body>
+    <section name="Visione">
+    	<p>Ricavare opportunità da necessità, facendo in modo che al termine del progetto si siano raggiunti obiettivi trascendenti le finalità specifiche del progetto stesso.</p>
+		<blockquote><p>The purpose of playing this game well is to be able to get the best position on the next game.</p>
+			<div align="right">
+				<b>Alistair Cockburn, 1999</b><br/>
+<i>Cooperative game manifesto for software development</i>
+			</div>
+		</blockquote> 
+				
+     </section>
+  </body>
+</document>
