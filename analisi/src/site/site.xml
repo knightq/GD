@@ -18,7 +18,8 @@
             <item name="Requisiti" href="/requisiti.html" collapse="true">
              		<item name="Descrizione" href="/documentoRequisiti.html"/>
              		<item name="Glossario" href="/glossarioRequisiti.html"/>
-             		<item name="Casi di uso e scenari" href="/casiUsoScenari.html"/>
+             		<item name="Attori" href="/attori.html"/>
+					<item name="Casi di uso e scenari" href="/casiUsoScenari.html"/>
              		<item name="RequisitiNonFunzionali" href="/requisitiNonFunzionali.html"/>            
             </item>
             <item name="Analisi" href="/analisi.html" collapse="true">

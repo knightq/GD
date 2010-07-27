@@ -22,3 +22,50 @@ blockquote {
 blockquote p {
 	margin: 4px; 
 }
+.action {
+	background-color: #FFEDDF;
+	background-image: url(../images/action.gif);
+	background-repeat: no-repeat;
+	border: 1px solid #FFA73F;
+	padding: 1px 1px 1px 18px;
+}
+.actor {
+	background-color: #EFFEFF;
+	background-image: url(../images/actor.gif);
+	background-position-x: 0px;
+	background-position-y: 0px;
+	background-repeat: no-repeat;
+	border: 1px solid navy;
+	padding: 1px 1px 1px 18px;
+}
+.item {
+	background-color: #FFF;
+	background-image: url(../images/item.png);
+	background-repeat: no-repeat;
+	border: 1px solid #000;
+	padding: 1px 1px 1px 18px;
+}
+div.img, div.img div.title {
+	background-color: #E0EBEF;
+	border: 2px solid navy;
+	border-collapse: collapse;
+	margin-left: auto ;
+  	margin-right: auto ;
+	text-align: center;
+}
+
+div.img div.title {
+	background-color: #2388BF;
+	border-bottom: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	color: #FFF;
+	font-size: 0.8em;
+	width: 100%;
+}
+.width50 {
+	width: 50%;
+}
+.inline {
+	display: inline;
+}

@@ -12,14 +12,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>AN01_PatternTab - Requisiti</title>
+    <title>AN01_PatternTab - 
+            Requisiti
+        </title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
       @import url("./css/site.css");
     </style>
     <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
-          <meta name="author" content="Andrea Salicetti" />
+          <meta name="author" content="
+            Andrea Salicetti
+        " />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       </head>
   <body class="composite">
@@ -43,7 +47,7 @@
   
     
             <div class="xleft">
-        Ultima Pubblicazione: 2010-07-26
+        Ultima Pubblicazione: 2010-07-27
                       </div>
             <div class="xright">            <a href="http://siaweb.kion.it:8887/sia-pr/" class="externalLink">Ambiente di test su HEAD</a>
             
@@ -93,6 +97,8 @@
       
             
       
+            
+      
               
             <li class="expanded">
               <strong>Requisiti</strong>
@@ -104,6 +110,10 @@
                   
     <li class="none">
                     <a href="glossarioRequisiti.html">Glossario</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="attori.html">Attori</a>
           </li>
                   
     <li class="none">
@@ -217,72 +227,124 @@
         <div class="section"><h2><a name="Requisiti"></a>
 Requisiti</h2>
 <p>
-	L’esigenza principale consiste nella possibilità di implementare una gestione di documenti.<br />
+                L’esigenza principale consiste nella possibilità di implementare una gestione di documenti.<br />
 
-	I documenti dovranno essere editabili dalle persone di Kion direttamente dal Kim e dovranno essere presentati agli utenti come pagine html.
-</p>
+                I documenti dovranno essere editabili dalle persone di Kion direttamente dal KIM e dovranno essere presentati agli utenti come pagine html.
+            </p>
+<p>
+				Definiamo Knowledge base l’insieme di documenti e di classificazioni gestiti dal sistema.
+			</p>
+<p>
+				La Knowledge base deve essere disponibile a tutti gli utenti abilitati all’accesso al CT. Non si vuole implementare, per ora, delle politiche di abilitazione (disabilitazione) basate sui ruoli dell’utente: chi entra può vedere tutti i documenti della knowledge base;</p>
 <div class="section"><h3><a name="Inserimento_modifica_e_cancellazione_documenti"></a>
 Inserimento, modifica e cancellazione documenti</h3>
 
-			E’ indispensabile creare una maschera che permetta ai redattori la gestione in modo agevole dei documenti. La maschera dovrebbe prevedere due modalità di utilizzo:
-			<ol type="1"><li><b>Edit inline</b>
-<br />
+                E’ indispensabile creare una maschera che permetta ai redattori la gestione in modo agevole dei documenti. La maschera dovrebbe prevedere due modalità di utilizzo:
+                <ol type="1"><li><b>
+                            Edit inline
+                        </b>
 
-						 L’edit diretto dal Kim non necessita di tutte le possibilità presentate in figura ma basta avere:
-						 <ul><li>Grassetto</li>
-<li>Corsivo</li>
-<li>Liste puntate</li>
-<li>Immagini</li>
-<li>Stili di paragrafo (titolo 1, titolo2 ecc)</li>
-<li>link</li>
-<li>tabelle semplici</li>
+                            La maschera dovrebbe essere simile a quella presente nella figura sotto:
+                        <div align="center"><img src="images/wysiwyg.png" alt="Prototipo di editor inline" /></div><p>
+                            L’edit diretto dal Kim non necessita di tutte le possibilità presentate in figura ma basta avere:
+                            <ul><li>
+                                    Grassetto
+                                </li>
+<li>
+                                    Corsivo
+                                </li>
+<li>
+                                    Liste puntate
+                                </li>
+<li>
+                                    Immagini
+                                </li>
+<li>
+                                    Stili di paragrafo (titolo 1, titolo2 ecc)
+                                </li>
+<li>
+                                    link
+                                </li>
+<li>
+                                    tabelle semplici
+                                </li>
 </ul>
 </p>
 </li>
-<li><b>Importazione di documenti esistenti</b>
+<li><b>
+                            Importazione di documenti esistenti
+                        </b>
 <br />
 L’edit inline è una modalità di utilizzo comoda per creare dei documenti piccoli (per esempio le faq) ma rende difficile la gestione di documenti complessi (per esempio i documenti di processo). Per questo motivo, è necessario avere la possibilità di importare dei documenti (word/pdf) per permettere ai redattori la possibilità di creare i documenti offline e, una volta terminato, fare l’upload del documento che sarà convertito nella sintassi richiesta dal KIM.
-Data l’elevata differenza tra i formati word/pdf e il formato html è accettabile immaginare che, almeno nella fase iniziale, l’import dei documenti complessi sia effettuato manualmente da un operatore che effettuerà anche un controllo sul risultato finale.
-Per i documenti più semplici (per esempio l’help associato ai messaggi di Esse3), è necessario implementare un servizio (web service?) che permetta di alimentare il sistema dall’esterno.</li>
+                            Data l’elevata differenza tra i formati word/pdf e il formato html è accettabile immaginare che, almeno nella fase iniziale, l’import dei documenti complessi sia effettuato manualmente da un operatore che effettuerà anche un controllo sul risultato finale.
+                            Per i documenti più semplici (per esempio l’help associato ai messaggi di Esse3), è necessario implementare un servizio (web service?) che permetta di alimentare il sistema dall’esterno.
+                        </li>
 </ol>
+<div class="section"><h3><a name="Caratteristiche_comuni_a_tutti_i_documenti"></a>
+Caratteristiche comuni a tutti i documenti</h3>
+
+					Tutti i documenti hanno in comune le seguenti caratteristiche:
+					<ul><li>hanno data di creazione e di ultima modifica/revisione.</li>
+<li>hanno l'indicazione dell'utente che ha creato il documento e di chi ha effettuato l'ultima revisione.</li>
+<li>possono afferire a uno o più processi.</li>
+<li>hanno una scadenza, superata la quale, devono essere oggetto di una revisione da parte di un redattore.</li>
+<li>possono essere collegati tra loro, con indicazioni del tipo: Vedi anche .... (Gestito dal redattore).</li>
+<li>possono avere dei tag che permettono dei percorsi di navigazione alternativi alla ricerca testuale e alla navigazione dei processi.</li>
+</ul>
+</div>
 </div>
 <div class="section"><h3><a name="Tagging_dei_documenti"></a>
 Tagging dei documenti</h3>
-<p>Per ogni documento è necessario poter definire diverse modalità di classificazione.</p>
-<p>Le classificazioni individuate finora sono:
-				<ul><li>processo/i di appartenenza – permette di creare un’associazione tra un documento e uno o più processi;</li>
-<li>tipologia di documento – per esempio: manuale, documento di processo, faq, howto ecc;</li>
-<li>soluzioni/howto/help online – è una classificazione che deve permettere di associare ad un messaggio applicativo di Esse3 uno o più documenti gestiti dalla knowledge base;</li>
-<li>altri tag a scelta del redattore – in questo caso un tag è un insieme di parole (per esempio posso associare un documento ad una versione di Esse3);</li>
+<p>
+                    Per ogni documento è necessario poter definire diverse modalità di classificazione.
+                </p>
+<p>
+                    Le classificazioni individuate finora sono:
+                    <ul><li>
+                            processo/i di appartenenza – permette di creare un’associazione tra un documento e uno o più processi;
+                        </li>
+<li>
+                            tipologia di documento – per esempio: manuale, documento di processo, faq, howto ecc;
+                        </li>
+<li>
+                            soluzioni/howto/help online – è una classificazione che deve permettere di associare ad un messaggio applicativo di Esse3 uno o più documenti gestiti dalla knowledge base;
+                        </li>
+<li>
+                            altri tag a scelta del redattore – in questo caso un tag è un insieme di parole (per esempio posso associare un documento ad una versione di Esse3);
+                        </li>
 </ul>
 </p>
 
-			Tipologia
-			Messaggi Esse3
-			Documenti
-			Processi
-			Altri Tag liberi
-		</div>
+                Tipologia
+                Messaggi Esse3
+                Documenti
+                Processi
+                Altri Tag liberi
+            </div>
 <div class="section"><h3><a name="Navigazione_della_Knowledge_base"></a>
 Navigazione della Knowledge base</h3>
 <div class="section"><h3><a name="Ricerca"></a>
 Ricerca</h3>
 
-				Una delle principali modalità di accesso è tramite la maschera di ricerca descritta in questo documento. I risultati ottenuti devono essere filtrabili per:
-				<ul><li>processo</li>
-<li>tipologia</li>
+                    Una delle principali modalità di accesso è tramite la maschera di ricerca descritta in questo documento. I risultati ottenuti devono essere filtrabili per:
+                    <ul><li>
+                            processo
+                        </li>
+<li>
+                            tipologia
+                        </li>
 </ul>
 </div>
 <div class="section"><h3><a name="Navigazione_dei_documento_di_processo"></a>
 Navigazione dei documento di processo</h3>
 
-				I documenti di processo devono essere accessibili anche tramite navigazione per Area processo. Quindi, a partire dal Menu, è necessario modificare il link “Documenti” affinché permetta di raggiungere un documento di processo (in uno o più passaggi).
-			</div>
+                    I documenti di processo devono essere accessibili anche tramite navigazione per Area processo. Quindi, a partire dal Menu, è necessario modificare il link “Documenti” affinché permetta di raggiungere un documento di processo (in uno o più passaggi).
+                </div>
 <div class="section"><h3><a name="Navigazione_da_messaggio_di_Esse3"></a>
 Navigazione da messaggio di Esse3</h3>
 
-				Deve essere possibile risalire ai documenti a partire da messaggi di ESSE3.
-			</div>
+                    Deve essere possibile risalire ai documenti a partire da messaggi di ESSE3.
+                </div>
 </div>
 </div>
 

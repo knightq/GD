@@ -1,40 +1,1178 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
-<document> 
-  <properties>
-    <title>Glossario</title>
-    <author email="asalicetti@kion.it">Andrea Salicetti</author>
-  </properties>
-  <body>
-    <section name="Glossario">
-		<p>
- 		</p>
-		
-                <subsection name="Significato dei termini">
+<document>
+    <properties>
+        <title>
+            Glossario
+        </title>
+        <author email="asalicetti@kion.it">
+            Andrea Salicetti
+        </author>
+    </properties>
+    <body>
+        <section name="Glossario">
+            <p>
+            </p>
+            
+            <subsection name="Significato dei termini">
                 <table border="1" width="100%" id="table2">
                     <thead>
-                        <th width="25%">
+                        <th width="10%">
                             <p align="center">
-                                     <b>TERMINE</b>
-                             </p>
+                                <b>
+                                    TERMINE
+                                </b>
+                            </p>
+                        </th>
+                        <th width="15%">
+                            <p align="center">
+                                <b>
+                                    SINONIMI
+                                </b>
+                            </p>
+                        </th>
+                        <th width="15%">
+                            <p align="center">
+                                <b>
+                                    STEREOTIPO
+                                </b>
+                            </p>
                         </th>
                         <th>
                             <p align="center">
-                                     <b>SIGNIFICATO</b>
-                             </p>
+                                <b>
+                                    SIGNIFICATO
+                                </b>
+                            </p>
                         </th>
                     </thead>
-                    <tr>
-                        <td align="justify" width="25%">... </td>
-                        <td align="justify">
-			...	                       
-			</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="collegamento">
+                                    Collegamento
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Entità (associativa fra
+                                <a href="#documento_interno">
+                                    documenti
+                                </a>
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Rappresenta una associazione fra due
+                                    <a href="#documento_interno">
+                                        documenti
+                                    </a> e viene creata all'atto del
+                                    <a href="collegamento_di_documenti">
+                                        collegamento di documenti
+                                    </a>.
+                                </p>
+                            </td>
+                        </tr>
+						<tr>
+                            <td align="justify" width="10%">
+                                <a name="collegamento_di_documenti">
+                                    Collegamento di
+                                    <a href="#documento_interno">
+                                        documenti
+                                    </a>
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Processo utente
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Azione mediante la quale un
+                                    <a href="#editore">
+                                        editore
+                                    </a>
+                                    crea una nuova relazione fra due
+                                    <a href="documento_interno">
+                                        documenti
+                                    </a>
+                                    , rendendo in tal modo i due
+                                    <a href="#documenti_collegati">
+                                        documenti collegati
+                                    </a>
+                                    fra loro.
+                                </p>
+                                <p>
+                                    La relazione che si crea all'atto del
+                                    <i>
+                                        collegamento di documenti
+                                    </i> è detta <a href="#collegamento">collegamento</a>.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="controllo">
+                                    Controllo
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Processo utente
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Azione di verifica intrapresa dall'
+                                    <a href="#editore">
+                                        editore
+                                    </a>
+                                    a seguito di una
+                                    <a href="#importazione">
+                                        importazione
+                                    </a>
+                                    .
+                                </p>
+                                <p>
+                                    Il
+                                    <i>
+                                        controllo
+                                    </i>
+                                    consiste nel visualizzare il
+                                    <a href="#documento">
+                                        documento
+                                    </a>
+                                    appena importato, al fine di verificare l'assenza di errori durante il processo di
+                                    <a href="#conversione">
+                                        conversione
+                                    </a>
+                                    intrapreso dal sistema.
+                                </p>
+                                <p>
+                                    Nel caso in cui il
+                                    <i>
+                                        controllo
+                                    </i>
+                                    faccia emergere differenze fra il
+                                    <a href="#documento_esterno">
+                                        documento esterno
+                                    </a>
+                                    importato e il relativo
+                                    <a href="#documento_interno">
+                                        documento interno
+                                    </a>
+                                    , l'
+                                    <a href="#editore">
+                                        editore
+                                    </a>
+                                    può intraprendere un'azione correttiva manuale mediante la
+                                    <a href="#modifica">
+                                        modifica del documento
+                                    </a>
+                                    .
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="conversione">
+                                    Conversione
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Processo sistema
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Funzionalità del sistema che deve intervenire contestualmente all'
+                                    <a href="#importazione">
+                                        importazione
+                                    </a>
+                                    di documenti esterni, che consiste nella traduzione del documento dal formato esterno al formato interno, al fine di una sua gestione nel sistema.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="creatore">
+                                    Creatore
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Attore (specializza
+                                <a href="#editore">
+                                    Editore
+                                </a>
+                                )
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Si definisce
+                                    <i>
+                                        creatore
+                                    </i>
+                                    <u>
+                                        di un determinato
+                                        <a href="#documento_interno">
+                                            documento
+                                        </a>
+                                    </u>
+                                    , l'
+                                    <a href="#editore">
+                                        editore
+                                    </a>
+                                    che lo ha
+                                    <i>
+                                        creato
+                                    </i>
+                                    .
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="ct">
+                                    CT
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Attore
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Custorer Ticket.<br/>
+                                    Sistema esterno (web) di gestione ticket.<br/>
+                                    Da questo sitema deve essere possibile l'accesso alla
+                                    <a href="#knowledge_base">
+                                        knowledge base
+                                    </a>
+                                    gestita dal sistema.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="data_di_creazione">
+                                    Data di creazione
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Proprietà del
+                                <a href="#documento_interno">
+                                    documento
+                                </a>
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    La data nella quale il
+                                    <a href="documento_interno">
+                                        documento
+                                    </a>
+                                    è stato
+                                    <i>
+                                        creato
+                                    </i>
+                                    .
+                                </p>
+                                <p>
+                                    Viene determinata in modo automatico dal sistema all'atto della creazione di un nuovo
+                                    <a href="documento_interno">
+                                        documento
+                                    </a>
+                                    .
+                                </p>
+                                <p>
+                                    Non può cambiare nel corso della vita del
+                                    <a href="documento_interno">
+                                        documento
+                                    </a>
+                                    .
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="data_di_revisione">
+                                    Data di revisione
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                                <a name="data_di_modifica">
+                                    Data di modifica
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                                Proprietà del
+                                <a href="#documento_interno">
+                                    documento
+                                </a>
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    La data nella quale il
+                                    <a href="documento_interno">
+                                        documento
+                                    </a>
+                                    ha subito le ultime modifiche.
+                                </p>
+                                <p>
+                                    Riflette un istante di tempo in cui si è verificato un evento replicabile (la
+                                    <i>
+                                        modifica
+                                    </i>
+                                    del
+                                    <a href="documento_interno">
+                                        documento
+                                    </a>
+                                    ) e può pertanto cambiare di valore nel corso della vita del
+                                    <a href="documento_interno">
+                                        documento
+                                    </a>
+                                    , a differenza della
+                                    <a href="#data_di_creazione">
+                                        data di creazione
+                                    </a>
+                                    .
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="data_di_scadenza">
+                                    Data di scadenza
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Proprietà del
+                                <a href="#documento_interno">
+                                    documento
+                                </a>
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    La data oltre la quale il
+                                    <a href="documento_interno">
+                                        documento
+                                    </a>
+                                    deve subire una
+                                    <a href="#revisione">
+                                        revisione
+                                    </a>
+                                    da parte di un
+                                    <a href="#editore">
+                                        editore
+                                    </a>
+                                    .
+                                </p>
+                                <p>
+                                    Riflette una soglia cronologica oltra le quale il
+                                    <a href="#documento_interno">
+                                        documento
+                                    </a>
+                                    viene considerato
+                                    <a href="#obsoleto">
+                                        obsoleto
+                                    </a>
+                                    e richiede pertanto l'intervento di un
+                                    <a href="#editore">
+                                        editore
+                                    </a>
+                                    per una sua
+                                    <a href="#revisione">
+                                        revisione
+                                    </a>
+                                    .
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="documenti_collegati">
+                                    Documenti collegati
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Relazione (fra
+                                <a href="#documento_interno">
+                                    documenti
+                                </a>
+                                )
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Due
+                                    <a href="#documento_interno">
+                                        documenti
+                                    </a>
+                                    sono
+                                    <i>
+                                        collegati
+                                    </i>
+                                    se contengono informazioni semanticamente analoghe.
+                                </p>
+                                <p>
+                                    La relazione di collegamento fra due
+                                    <a href="#documento_interno">
+                                        documenti
+                                    </a>
+                                    viene stabilita da un
+                                    <a href="editore">
+                                        editore
+                                    </a>
+                                    mediante una azione di
+                                    <a href="#collegamento_di_documenti">
+                                        collegamento
+                                    </a>.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="documento">
+                                    <i>
+                                        Documento
+                                    </i>
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Entità
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Informazione testuale in formato elettronico destinata all'utente.<br/>Un documento rappresenta una unità informativa ed è caratterizzato da un formato di supporto (pdf, doc, html, testo semplice).
+                                </p>
+                                <p>
+                                    Si possono classificare i documenti in base alla loro posizione rispetto al sistema:
+                                    <div align="center">
+                                        <img src="images/documenti.png" alt="Tassonomia dei documenti" width="75%"/>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a href="#documento_interno">
+                                                <b>
+                                                    Documento interno
+                                                </b>
+                                            </a>
+                                            : documento prodotto e gestito mediante il sistema (sia per edit inline, sia per importazione).<br/>Un documento interno al sistema può essere catalogato.
+                                        </li>
+                                        <li>
+                                            <a href="#documento_esterno">
+                                                <b>
+                                                    Documento esterno
+                                                </b>
+                                            </a>
+                                            : documento prodotto esternamente al sistema.
+                                        </li>
+                                    </ul>
+                                </p>
+                                <p>
+                                    In seguito, si farà riferimento al termine
+                                    <b>
+                                        documento
+                                    </b>
+                                    (senza aggettivo), sottintendendo sempre il termine
+                                    <b>
+                                        documento interno
+                                    </b>
+                                    .
+                                </p>
+                                <p>
+                                    Qualora si faccia riferimento propriamente a documenti esterni, l'aggettivo qualificativo
+                                    <i>
+                                        esterno
+                                    </i>
+                                    sarà sempre indicato.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="documento_esterno">
+                                    Documento esterno
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Entità
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    <a href="#documento">
+                                        Documento
+                                    </a>
+                                    non gestito dal sistema e prodotto al di fuori di esso.
+                                </p>
+                                <p>
+                                    E' prevista la possibilità, mediante il processo di
+                                    <a href="#importazione">
+                                        importazione
+                                    </a>
+                                    , di mappare un
+                                    <i>
+                                        documento esterno
+                                    </i>
+                                    nel sistema, creandone in questo modo una sua rappresentazione interna al sistema, sottoforma di
+                                    <a href="#documento_interno">
+                                        documento interno
+                                    </a>
+                                    .
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="documento_interno">
+                                    Documento [interno]
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Entità
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    <a href="#documento">
+                                        Documento
+                                    </a>
+                                    gestito dal sistema.
+                                </p>
+                                <p>
+                                    Un
+                                    <i>
+                                        documento [interno]
+                                    </i>
+                                    può essere catalogato in base ai contenuti che riporta, al processo a cui è associato, alla propria tipologia.
+                                </p>
+                                <h2>
+                                    Caratteristiche
+                                </h2>
+                                <p>
+                                    Ogni
+                                    <i>
+                                        documento [interno]
+                                    </i>
+                                    , in quanto gestito dal sistema, gode delle seguenti proprietà:
+                                    <ul>
+                                        <li>
+                                            ha una
+                                            <a href="#data_di_creazione">
+                                                data di creazione
+                                            </a>
+                                            associata.
+                                        </li>
+                                        <li>
+                                            ha una
+                                            <a href="#data_di_revisione">
+                                                data di ultima modifica / revisione
+                                            </a>
+                                            associata.
+                                        </li>
+                                        <li>
+                                            è associato ad un
+                                            <a href="#redattore">
+                                                redattore
+                                            </a>
+                                            che l'ha creato (il
+                                            <a href="#creatore">
+                                                <i>
+                                                    creatore
+                                                </i>
+                                            </a>
+                                            ).
+                                        </li>
+                                        <li>
+                                            può essere associato ad un
+                                            <a href="#editore">
+                                                editore
+                                            </a>
+                                            che lo ha revisionato per ultimo (il
+                                            <i>
+                                                <a href="#revisore">
+                                                    revisore
+                                                </a>
+                                            </i>
+                                            ).
+                                        </li>
+                                        <li>
+                                            può essere associato ad uno o più
+                                            <a href="#processo">
+                                                processi
+                                            </a>
+                                            .
+                                        </li>
+                                        <li>
+                                            ha una data di scadenza, superata la quale, deve essere oggetto di una revisione da parte di un
+                                            <a href="#editore">
+                                                editore
+                                            </a>
+                                            che diventerà, a seguito dell'intervento,
+                                            <a href="#revisore">
+                                                revisore
+                                            </a>
+                                            per il documento.
+                                        </li>
+                                        <li>
+                                            può essere associata ad altri
+                                            <a href="#documenti_interni">
+                                                documenti
+                                            </a>
+                                            (anche più di uno) e l'associazione è caratterizzata da una tipologia:
+                                            <ul>
+                                                <li>
+                                                    Vedi anche...
+                                                </li>
+                                                <li>
+                                                    ...
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            può avere dei
+                                            <a href="#tag">
+                                                tag
+                                            </a>
+                                            che permettono dei percorsi di navigazione alternativi alla
+                                            <a href="#ricerca_testuale">
+                                                ricerca testuale
+                                            </a>
+                                            e alla navigazione dei processi.
+                                        </li>
+                                    </ul>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="edit_inline">
+                                    Edit inline
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Processo utente
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Funzionalità del sistema che realizza una parte delle
+                                    <a href="gestione_di_documenti">
+                                        <i>
+                                            funzionalità amministrative
+                                        </i>
+                                    </a>
+                                    , permettendo agli
+                                    <a href="#editore">
+                                        editori
+                                    </a>
+                                    di
+                                    <i>
+                                        inserire
+                                    </i>
+                                    e
+                                    <i>
+                                        modificare
+                                    </i>
+                                    i
+                                    <a href="#documento_interno">
+                                        documenti
+                                    </a>
+                                    nel sistema.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="editore">
+                                    Editore
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                                <a name="persone_di_kion">
+                                    Persona di Kion
+                                </a>
+                                ,
+                                <a name="redattore">
+                                    Redattore
+                                </a>
+                                ,
+                                <a name="operatore">
+                                    Operatore
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                                Attore
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Persona fisica con
+                                    <b>
+                                        responsabilità amministrative
+                                    </b>
+                                    sulla
+                                    <a href="#gestione_dei_documenti">
+                                        gestione dei documenti
+                                    </a>
+                                    .
+                                </p>
+                                <p>
+                                    In rapporto alle operazioni eseguite sul singolo documento, un
+                                    <i>
+                                        redattore
+                                    </i>
+                                    può definirsi, nell'ambito di quello specifico
+                                    <a href="#documento_interno">
+                                        documento
+                                    </a>
+                                    :
+                                    <div align="center">
+                                        <img src="images/editori.png" alt="Tassonomia degli editori."/>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a href="#creatore">
+                                                Creatore
+                                            </a>
+                                            , nel caso in cui l'
+                                            <i>
+                                                editore
+                                            </i>
+                                            abbia
+                                            <i>
+                                                creato
+                                            </i>
+                                            il
+                                            <a href="documento_interno">
+                                                documento
+                                            </a>
+                                            .
+                                        </li>
+                                        <li>
+                                            <a href="#revisore">
+                                                Revisore
+                                            </a>
+                                            , nel caso in cui l'
+                                            <i>
+                                                editore
+                                            </i>
+                                            sia l'ultimo ad aver
+                                            <i>
+                                                modificato
+                                            </i>
+                                            il
+                                            <a href="documento_interno">
+                                                documento
+                                            </a>
+                                            .
+                                        </li>
+                                    </ul>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="gestione_di_documenti">
+                                    Gestione di documenti
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Processo
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Insieme di funzionalità messe a disposizione dal sistema al fine di permettere:
+                                    <ul>
+                                        <li>
+                                            <b>
+                                                funzionalità amministrative
+                                            </b>
+                                            <ul>
+                                                <li>
+                                                    l'
+                                                    <i>
+                                                        inserimento
+                                                    </i>
+                                                    diretto di nuovi
+                                                    <a href="#documento_interno">
+                                                        documenti
+                                                    </a>
+                                                    .
+                                                </li>
+                                                <li>
+                                                    l'
+                                                    <i>
+                                                        importazione
+                                                    </i>
+                                                    di
+                                                    <a href="#documento_esterno">
+                                                        documenti esterni
+                                                    </a>
+                                                    .
+                                                </li>
+                                                <li>
+                                                    la
+                                                    <i>
+                                                        modifica
+                                                    </i>
+                                                    di
+                                                    <a href="#documento_interno">
+                                                        documenti
+                                                    </a>
+                                                    .
+                                                </li>
+                                                <li>
+                                                    la
+                                                    <i>
+                                                        cancellazione
+                                                    </i>
+                                                    di
+                                                    <a href="#documento_interno">
+                                                        documenti
+                                                    </a>
+                                                    precedentemente immessi nel sistema.
+                                                </li>
+                                                <li>
+                                                    la
+                                                    <i>
+                                                        catalogazione
+                                                    </i>
+                                                    di
+                                                    <a href="#documento_interno">
+                                                        documenti
+                                                    </a>
+                                                    .
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <b>
+                                                funzionalità di consultazione
+                                            </b>
+                                            <ul>
+                                                <li>
+                                                    <i>
+                                                        recupero
+                                                    </i>
+                                                    di
+                                                    <a href="#documento_interno">
+                                                        documenti
+                                                    </a>
+                                                    presenti nel sitema.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="importazione">
+                                    Importazione
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                                <a name="upload_del_documento">
+                                    upload del documento (esterno)
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                                Processo
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Funzionalità del sistema che realizza una parte delle
+                                    <a href="gestione_di_documenti">
+                                        <i>
+                                            funzionalità amministrative
+                                        </i>
+                                    </a>
+                                    , permettendo agli
+                                    <a href="#editore">
+                                        editori
+                                    </a>
+                                    di
+                                    <i>
+                                        importare
+                                    </i>
+                                    <a href="#documento_esterno">
+                                        documenti esterni
+                                    </a>
+                                    .<br/>
+                                    <i>
+                                        Importare
+                                    </i>
+                                    indica il processo automatico, realizzato dal sistema, in grado di produrre un nuovo
+                                    <a href="#documento_interno">
+                                        documento
+                                    </a>
+                                    interno al sistema, a partire da documenti prodotti esternamente al sistema stesso, mediante il processo di
+                                    <a href="#conversione">
+                                        conversione
+                                    </a>
+                                    .
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="knowledge_base">
+                                    Knowledge base
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Entità
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Insieme di
+                                    <a href="#documento_interno">
+                                        documenti
+                                    </a>
+                                    e di
+                                    <a href="#classificazione">
+                                        classificazioni
+                                    </a>
+                                    gestiti dal sistema.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="kim">
+                                    KIM
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Attore
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    KION Internal Management.<br/>
+                                    Sistema esterno (client) di gestione ticket.<br/>
+                                    Da questo sitema deve essere possibile l'accesso alla
+                                    <a href="#knowledge_base">
+                                        knowledge base
+                                    </a>
+                                    gestita dal sistema.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="fruitore">
+                                    Fruitore
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                                <a name="utente">
+                                    Utente
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                                Attore
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Persona fisica o sistema informatico con
+                                    <b>
+                                        responsabilità di consultazione
+                                    </b>
+                                    sulla
+                                    <a href="#gestione_dei_documenti">
+                                        gestione dei documenti
+                                    </a>
+                                    .
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="obsoleto">
+                                    [Documento] obsoleto
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Stato del
+                                <a href="#documento_interno">
+                                    documento
+                                </a>
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Un
+                                    <a href="documento_interno">
+                                        documento
+                                    </a>
+                                    è
+                                    <i>
+                                        obsoleto
+                                    </i>
+                                    nel momento in cui la propria
+                                    <a href="#data_di_scadenza">
+                                        data di scadenza
+                                    </a>
+                                    è antecedente alla data odierna (relativamente al periodo temporale di consultazione del
+                                    <a href="#documento_interno">
+                                        documento
+                                    </a>
+                                    ).
+                                </p>
+                                <p>
+                                    Un
+                                    <a href="#documento_interno">
+                                        documento
+                                    </a>
+                                    <i>
+                                        obsoleto
+                                    </i>
+                                    può abbandonare tale stato nel momento in cui interviene una
+                                    <a href="#revisore">
+                                        revisione
+                                    </a>
+                                    dello stesso che ne modifica la
+                                    <a href="data_di_scadenza">
+                                        data di scadenza
+                                    </a>
+                                    .
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="processo">
+                                    Processo
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Entità
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    .
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="revisione">
+                                    Revisione
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Processo utente
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Azione relativa ad uno specifico
+                                    <a href="#documento_interno">
+                                        documento
+                                    </a>
+                                    , che consiste nella
+                                    <i>
+                                        modifica
+                                    </i>
+                                    dello stesso, in una fase successiva alla sua
+                                    <i>
+                                        creazione
+                                    </i>
+                                    .
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="justify" width="10%">
+                                <a name="revisore">
+                                    Revisore
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Attore (specializza
+                                <a href="#editore">
+                                    Editore
+                                </a>
+                                )
+                            </td>
+                            <td align="justify">
+                                <p>
+                                    Si definisce
+                                    <i>
+                                        revisore
+                                    </i>
+                                    <u>
+                                        di un determinato
+                                        <a href="#documento_interno">
+                                            documento
+                                        </a>
+                                    </u>
+                                    , l'
+                                    <a href="#editore">
+                                        editore
+                                    </a>
+                                    che ha compiuto l'ultima
+                                    <a href="#revisione">
+                                        revisione
+                                    </a>
+                                    , in ordine temporale, dello stesso.
+                                </p>
+                            </td>
+                        </tr>
+						<tr>
+                            <td align="justify" width="10%">
+                                <a name="tag">
+                                    Tag
+                                </a>
+                            </td>
+                            <td align="justify" width="15%">
+                            </td>
+                            <td align="justify" width="15%">
+                                Entità
+                            </td>
+                            <td align="justify">
+                                <p>
+                                	Metainformazione associata a zero o più <a href="#documento_interno">documenti</a> che definisce il contesto semantico di un documento.
+                                </p>
+								<p>
+									Strutturalemente è testo semplice, di lunghezza limitata (al limite una sola parola) ed è utilizzato come criterio di indicizzazione dei <a href="#documento_interno">documenti</a>.
+								</p>
+								<p>
+									Un <a href="#documento_interno">documento</a> è <a href="#classificazione">classificato</a> mediante l'associazione del medesimo a uno o più <i>tag</i>.
+								</p>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </subsection>
-
-
-
-    </section>
-  </body>
+        </section>
+    </body>
 </document>

@@ -1,31 +1,279 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
-<document> 
-  <properties>
-    <title>Descrizione dei requisiti</title>
-    <author email="asalicetti@kion.it">Andrea Salicetti</author>
-  </properties>
-  <body>
-    <section name="Descrizione dei requisiti">
-		<p>
-			Progettare un pattern e realizzarne una implementazione per il caso specifico della funzione Nuova Programmazione Didattica che permetta di astrarre la gestione degli aggiornamenti dell'interfaccia utente fra porzioni di maschera visibili in mutua esclusione all'interno di un unico Business Process. 
- 		</p>
-		<p>
-			Il pattern deve garanalisitire le seguenti invarianalisiti:
-			<ol>
-				<li>Ogni elemento della maschera (dettaglio di modello, stato di un pulsanalisite, cardinalit� di un datamodel, ...) pu� essere sensibile a eventi che intercorrono su modelli di controller diversi dal corrente e che gestiscono un tab differente da quello degli elementi in questione.</li>
-				<li>L'aggiornamento dell'interfaccia a seguito del verificarsi di un evento scatenanalisite deve essere:
-					<ol>
-						<li><b>Garanalisitita sull'interfaccia</b>: non � necessaria una interazione <i>sincrona</i> tra evento e aggiornamento, purch� sia garanalisitito il fatto che, 
-						      nel momento in cui l'utente si ritrova visualizzata la porzione di maschera oggetto dell'aggiornamento.</li>
-						<li><b>Automatica</b>: ossia indipendente da ulteriori azioni utente, al di fuori di quelle che hanalisino scatenato l'evento.</li>
-						<li><b>Invarianalisite rispetto ai modelli</b>: l'aggiornamento deve riguardare esclusivamente le singole prozioni di maschera bersaglio dell'aggiornamento.
-						In particolare un aggiornamento non deve modificare l'insieme dei modelli precedentemente presentati all'utente, se non limitatamente a quelli direttamente legati all'evento.</li>
-					</ol>
-				</li>
-				<li>L'evento deve poter essere causato da Business Process esterni a quello da aggiornare.</li>
-			</ol>
-		</p>
-    </section>
-  </body>
+<document>
+    <properties>
+        <title>
+            Descrizione dei requisiti
+        </title>
+        <author email="asalicetti@kion.it">
+            Andrea Salicetti
+        </author>
+    </properties>
+    <body>
+        <section name="Descrizione dei requisiti">
+            <p>
+                L’esigenza principale consiste nella possibilità di implementare una
+                <a href="glossarioRequisiti.html#gestione_di_documenti">
+                    <span class="action">
+                        gestione di documenti
+                    </span>
+                </a>
+                I
+                <a href="glossarioRequisiti.html#documento">
+                    <span class="item">
+                        documenti
+                    </span>
+                </a>
+                dovranno essere editabili dalle
+                <a href="glossarioRequisiti.html#persone_di_kion">
+                    <span class="actor">
+                        persone di Kion
+                    </span>
+                </a>
+                direttamente dal
+                <a href="glossarioRequisiti.html#kim">
+                    <span class="actor">
+                        KIM
+                    </span>
+                </a>
+                e dovranno essere presentati agli
+                <a href="glossarioRequisiti.html#utente">
+                    <span class="actor">
+                        utenti
+                    </span>
+                </a>
+                come pagine html.
+            </p>
+            <p>
+                Definiamo
+                <a href="glossarioRequisiti.html#knowledge_base">
+                    <span class="item">
+                        Knowledge base
+                    </span>
+                </a>
+                l’insieme di documenti e di classificazioni gestiti dal sistema.
+            </p>
+            <p>
+                La Knowledge base deve essere disponibile a tutti gli utenti abilitati all’accesso al
+                <a href="glossarioRequisiti.html#ct">
+                    <span class="actor">
+                        CT
+                    </span>
+                </a>
+                . Non si vuole implementare, per ora, delle politiche di abilitazione (disabilitazione) basate sui ruoli dell’utente: chi entra può vedere tutti i documenti della knowledge base;
+            </p>
+            <subsection name="Inserimento, modifica e cancellazione documenti">
+                E’ indispensabile creare una maschera che permetta ai
+                <a href="glossarioRequisiti.html#redattore">
+                    <span class="actor">
+                        redattori
+                    </span>
+                </a>
+                la gestione in modo agevole dei documenti. La maschera dovrebbe prevedere due modalità di utilizzo:
+                <ol>
+                    <li>
+                        <b>
+                            <a href="glossarioRequisiti.html#edit_inline">
+                                <span class="action">
+                                    Edit inline
+                                </span>
+                            </a>
+                        </b>
+                        <p>
+                            La maschera dovrebbe essere simile a quella presente nella figura sotto:
+                        </p>
+                        <div align="center">
+                            <img src="images/wysiwyg.png" alt="Prototipo di editor inline"/>
+                        </div>
+                        <p>
+                            L’edit diretto dal Kim non necessita di tutte le possibilità presentate in figura ma basta avere:
+                            <ul>
+                                <li>
+                                    Grassetto
+                                </li>
+                                <li>
+                                    Corsivo
+                                </li>
+                                <li>
+                                    Liste puntate
+                                </li>
+                                <li>
+                                    Immagini
+                                </li>
+                                <li>
+                                    Stili di paragrafo (titolo 1, titolo2 ecc)
+                                </li>
+                                <li>
+                                    link
+                                </li>
+                                <li>
+                                    tabelle semplici
+                                </li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <b>
+                            <a href="glossarioRequisiti.html#importazione">
+                                <span class="action">
+                                    Importazione
+                                </span>
+                            </a>
+                            di documenti esistenti
+                        </b>
+                        <br/>
+                        <p>
+                            L’edit inline è una modalità di utilizzo comoda per creare dei documenti piccoli (per esempio le faq) ma rende difficile la gestione di documenti complessi (per esempio i documenti di processo).<br/>
+                            Per questo motivo, è necessario avere la possibilità di importare dei documenti (word/pdf) per permettere ai redattori la possibilità di creare i documenti offline e, una volta terminato, fare l’
+                            <a href="glossarioRequisiti.html#upload_del_documento">
+                                <span class="action">
+                                    upload del <a href="glossarioRequisiti.html#documento_esterno">documento</a>
+                                </span>
+                            </a>
+                            che sarà
+                            <a href="glossarioRequisiti.html#conversione">
+                                <span class="action">
+                                    convertito
+                                </span>
+                            </a>
+                            nella sintassi richiesta dal <a href="glossarioRequisiti.html#kim">KIM</a>.
+                        </p>
+                        <p>
+                            Data l’elevata differenza tra i formati word/pdf e il formato html è accettabile immaginare che, almeno nella fase iniziale, l’import dei <a href="glossarioRequisiti.html#documento_esterno">documenti</a> complessi sia effettuato manualmente da un
+                            <a href="glossarioRequisiti.html#operatore">
+                                <span class="actor">
+                                    operatore
+                                </span>
+                            </a>
+                            che effettuerà anche un
+                            <a href="glossarioRequisiti.html#controllo">
+                                <span class="action">
+                                    controllo
+                                </span>
+                            </a>
+                            sul risultato finale.
+                        </p>
+                        <p>
+                            Per i <a href="glossarioRequisiti.html#documento_interno">documenti</a> più semplici (per esempio l’help associato ai messaggi di Esse3), è necessario implementare un servizio (web service?) che permetta di
+                            <span class="action">
+                                alimentare il sistema dall’esterno
+                            </span>
+                            .
+                        </p>
+                    </li>
+                </ol>
+                <subsection name="Caratteristiche comuni a tutti i documenti">
+                    Tutti i <a href="glossarioRequisiti.html#documento_interno">documenti</a> hanno in comune le seguenti caratteristiche:
+                    <ul>
+                        <li>
+                            hanno <a href="glossarioRequisiti.html#data_di_creazione"><span class="item">data di creazione</span></a> e di <a href="glossarioRequisiti.html#data_di_revisione"><span class="item">ultima modifica/revisione</span></a>.
+                        </li>
+                        <li>
+                            hanno l'indicazione dell'<a href="glossarioRequisiti.html#creatore"><span class="actor">utente</span></a> che ha creato il <a href="glossarioRequisiti.html#documento_interno">documento</a> e di <a href="glossarioRequisiti.html#revisore"><span class="actor">chi</span></a> ha effettuato l'ultima <a href="glossarioRequisiti.html#revisione"><span class="action">revisione</span></a>.
+                        </li>
+                        <li>
+                            possono afferire a uno o più <a href="glossarioRequisiti.html#processo"><span class="item">processi</span></a>.
+                        </li>
+                        <li>
+                            hanno una <a href="glossarioRequisiti.html#data_di_scadenza"><span class="item">scadenza</span></a>, superata la quale, diventano <a href="glossarioRequisiti.html#obsoleto"><span class="item">obsoleti</span></a> e devono essere oggetto di una <a href="glossarioRequisiti.html#revisione">revisione</a> da parte di un <a href="glossarioRequisiti.html#redattore">redattore</a>.
+                        </li>
+                        <li>
+                            possono essere <a href="glossarioRequisiti.html#collegare_documenti"><span class="action">collegati</span></a> tra loro, con indicazioni del tipo: Vedi anche .... (Gestito dal redattore).
+                        </li>
+                        <li>
+                            possono avere dei <a href="glossarioRequisiti.html#tag"><span class="item">tag</span></a> che permettono dei percorsi di navigazione alternativi alla ricerca testuale e alla navigazione dei processi.
+                        </li>
+                    </ul>
+                </subsection>
+            </subsection>
+            <subsection name="Tagging dei documenti">
+                <p>
+                    Per ogni documento è necessario poter definire diverse modalità di
+                    <span class="action">
+                        classificazione
+                    </span>
+                    .
+                </p>
+                <p>
+                    Le
+                    <span class="item">
+                        classificazioni
+                    </span>
+                    individuate
+                    <u>
+                        finora
+                    </u>
+                    sono:
+                    <ul>
+                        <li>
+                            <span class="item">
+                                processo
+                            </span>
+                            /i di appartenenza – permette di
+                            <span class="action">
+                                creare un’associazione
+                            </span>
+                            tra un documento e uno o più processi;
+                        </li>
+                        <li>
+                            <span class="item">
+                                tipologia di documento
+                            </span>
+                            – per esempio:
+                            <span class="item">
+                                manuale
+                            </span>
+                            ,
+                            <span class="item">
+                                documento di processo
+                            </span>
+                            ,
+                            <span class="item">
+                                faq
+                            </span>
+                            ,
+                            <span class="item">
+                                howto
+                            </span>
+                            ecc;
+                        </li>
+                        <li>
+                            soluzioni/howto/help online – è una classificazione che deve permettere di associare ad un messaggio applicativo di Esse3 uno o più documenti gestiti dalla knowledge base;
+                        </li>
+                        <li>
+                            altri
+                            <span class="item">
+                                tag
+                            </span>
+                            a scelta del redattore – in questo caso un tag è un insieme di parole (per esempio posso associare un documento ad una versione di Esse3);
+                        </li>
+                    </ul>
+                </p>
+                Tipologia<br/>
+                Messaggi Esse3<br/>
+                Documenti<br/>
+                Processi<br/>
+                Altri Tag liberi<br/>
+            </subsection>
+            <subsection name="Navigazione della Knowledge base">
+                <subsection name="Ricerca">
+                    Una delle principali modalità di accesso è tramite la maschera di ricerca descritta in questo documento. I risultati ottenuti devono essere filtrabili per:
+                    <ul>
+                        <li>
+                            processo
+                        </li>
+                        <li>
+                            tipologia
+                        </li>
+                    </ul>
+                </subsection>
+                <subsection name="Navigazione dei documento di processo">
+                    I documenti di processo devono essere accessibili anche tramite navigazione per Area processo. Quindi, a partire dal Menu, è necessario modificare il link “Documenti” affinché permetta di raggiungere un documento di processo (in uno o più passaggi).
+                </subsection>
+                <subsection name="Navigazione da messaggio di Esse3">
+                    Deve essere possibile risalire ai documenti a partire da messaggi di ESSE3.
+                </subsection>
+            </subsection>
+        </section>
+    </body>
 </document>

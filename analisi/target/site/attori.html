@@ -12,14 +12,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>AN01_PatternTab - Requisiti non funzionali</title>
+    <title>AN01_PatternTab - 
+            Attori
+        </title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
       @import url("./css/site.css");
     </style>
     <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
-          <meta name="author" content="Andrea Salicetti" />
+          <meta name="author" content="
+            Andrea Salicetti
+        " />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       </head>
   <body class="composite">
@@ -90,11 +94,11 @@
             
       
             
+            
+            
       
             
       
-            
-            
               
             <li class="expanded">
                     <a href="requisiti.html">Requisiti</a>
@@ -109,16 +113,16 @@
           </li>
                   
     <li class="none">
-                    <a href="attori.html">Attori</a>
-          </li>
+              <strong>Attori</strong>
+        </li>
                   
     <li class="none">
                     <a href="casiUsoScenari.html">Casi di uso e scenari</a>
           </li>
                   
     <li class="none">
-              <strong>RequisitiNonFunzionali</strong>
-        </li>
+                    <a href="requisitiNonFunzionali.html">RequisitiNonFunzionali</a>
+          </li>
               </ul>
         </li>
               
@@ -220,8 +224,66 @@
     </div>
     <div id="bodyColumn">
       <div id="contentBox">
-        <div class="section"><h2><a name="Requisiti_non_funzionali"></a>
-Requisiti non funzionali</h2>
+        <div class="section"><h2><a name="Attori"></a>
+Attori</h2>
+
+			Funzionalmente, sono individuabili due tipologie di attori:
+			<ol type="1"><li><a href="glossarioRequisiti.html#fruitore"><b>Fruitore</b>
+</a>
+: persona fisica o sistema informatico con <b>responsabilità di consultazione</b>
+ sulla<a href="glossarioRequisiti.html#gestione_di_documenti"> gestione dei documenti</a>
+.</li>
+<li><a href="glossarioRequisiti.html#editore"><b>Editore</b>
+</a>
+: persona fisica con <b>responsabilità amministrative</b>
+ sulla<a href="glossarioRequisiti.html#gestione_di_documenti"> gestione dei documenti</a>
+.</li>
+</ol>
+<div class="section"><h3><a name="Fruitore"></a>
+Fruitore</h3>
+
+				Da una prima analisi del documento dei requisiti, emerge la seguente tassonomia di fruitori:
+					<div class="img width50"><img src="images/fruitori_da_requisiti.png" alt="Tassonomia dei fruitori come risulta dal documento dei requisiti." /><div class="title"><b>[Fig.1]</b>
+ Tassonomia dei fruitori come risulta dal documento dei requisiti.</div></div><p>In realtà, entrambi i <a href="glossarioRequisiti.html#fruitore">fruitori</a>
+ non umani dei sistema interagiscono con sistema alla stessa maniera.</p>
+<p>
+						La tassonomia dei <a href="glossarioRequisiti.html#fruitore">fruitori</a>
+ è quindi più significativa se si rende esplicita la proprietà chiave di entrambi, ossia il fatto che non interagiscono col sistema da una interfaccia web, come fa l'<a href="glossarioRequisiti.html#utente">utente</a>
+, bensì, verosimilmente, tramite opportune interfacce da progettare.</p>
+<p>Ecco dunque una nuova tassonomia più utile ai fini dell'analisi:</p>
+<div class="img width50"><img src="images/fruitori_post_revisione.png" alt="Tassonomia dei fruitori rivista." /><div class="title"><b>[Fig.2]</b>
+ Tassonomia dei fruitori rivista.</div></div><p>Come si può notare, la nuova tassonomia, compatibile coi requisiti, apre alla possibilità di avere ulteriori sistemi esterni a quello in analisi, che potenzialmente potrebbero fungere da <a href="glossarioRequisiti.html#fruitore">fruitori</a>
+ verso lo stesso, in maniera del tutto analoga a quanto richiesto per i sistemi già ipotizzati <a href="glossarioRequisiti.html#ct">CT</a>
+ e <a href="glossarioRequisiti.html#kim">KIM</a>
+.</p>
+<p>
+						In definitiva, emerge in maniera più chiara l'esigenza di una interfaccia applicativa alle <a href="glossarioRequisiti.html#gestione_di_documenti">funzionalità di consultazione</a>
+ del sistema.
+					</p>
+</div>
+<div class="section"><h3><a name="Editore"></a>
+Editore</h3>
+<p>L'<a href="glossarioRequisiti.html#editore">editore</a>
+ è un concetto generale che identifica un particolare attore del sistema con accesso alle <a href="glossarioRequisiti.html#gestione_di_documenti">funzionalità amministrative</a>
+.</p>
+<p>Nel contesto di un singolo <a href="glossarioRequisiti.html#documento_interno">documento</a>
+, l'<a href="glossarioRequisiti.html#editore">editore</a>
+ si dice:</p>
+<ul><li><a href="glossarioRequisiti.html#creatore"><b>creatore</b>
+</a>
+, qualora sia l'<a href="glossarioRequisiti.html#editore">editore</a>
+ che ha <i>creato</i>
+ il <a href="glossarioRequisiti.html#documento_interno">documento</a>
+ in oggetto.</li>
+<li><a href="glossarioRequisiti.html#revisore"><b>revisore</b>
+</a>
+, qualora sia l'<a href="glossarioRequisiti.html#editore">editore</a>
+ che per ultimo, in termini cronologici, ha <i>modificato</i>
+ il <a href="glossarioRequisiti.html#documento_interno">documento</a>
+ in oggetto.</li>
+</ul>
+<div class="img width50"><img src="images/editori.png" alt="Tassonomia degli editori." /><div class="title"><b>[Fig.3]</b>
+ Tassonomia degli editori.</div></div></div>
 </div>
 
       </div>
