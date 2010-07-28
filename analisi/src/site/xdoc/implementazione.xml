@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
 <document> 
   <properties>
@@ -6,9 +6,13 @@
     <author email="asalicetti@kion.it">Andrea Salicetti</author>
   </properties>
   <body>
-    <section name="Distribuzione">
+    <section name="Implementazione">
 		<p>
+			In questa sezione mostreremo come implementare il progetto con Rails.
  		</p>
+		<p>
+			Nell'affrontare il compito, si applicherà il principio <i>divide et impera</i>, abbracciando un approccio di sviluppo prototipale e agile, che ben si adatta alle caratteristiche di Rails (o sarebbe meglio dire che Rails supporta molto bene).
+		</p>
 	<subsection name="Note implementative">
  	</subsection>
 </section>

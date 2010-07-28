@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="AN01_PatternTab">
-
+<!--
   <banalisinerLeft>
     <name>U-GOV Didattica</name>
     <src>images/logo.gif</src>
     <href>http://siaweb.kion.it:8887/sia-pr/</href>
   </banalisinerLeft>
-
+-->
     <body>
         <links>
             <item name="Ambiente di test su HEAD" href="http://siaweb.kion.it:8887/sia-pr/"/>
@@ -32,17 +32,24 @@
             </item>
            
             <item name="Piano di lavoro" href="/pianoDiLavoro.html"/>
-            <item name="Piano del collaudo" href="/pianoCollaudo.html"/>
+            <!--
+			<item name="Piano del collaudo" href="/pianoCollaudo.html"/>
+			-->
             <item name="Progetto" href="/progetto.html" collapse="true">
             	<item name="Scelte" href="/alberoDecisioni.html"/>
-                <item name="Pattern individuati" href="/pattern.html"/>
-             		<item name="Architettura" href="/architettura.html" collapse="true">
-                		<item name="Struttura" href="/strutturaDelSistema.html"/>
-                		<item name="Comportamento" href="/comportamentoDelSistema.html"/>
-                		<item name="Interazione" href="/interazione.html"/>
-            		</item>
+                <!--<item name="Pattern individuati" href="/pattern.html"/>-->
+             	<item name="Architettura" href="/architettura.html" collapse="true">
+                	<item name="Struttura" href="/strutturaDelSistema.html"/>
+                	<item name="Comportamento" href="/comportamentoDelSistema.html"/>
+                	<item name="Interazione" href="/interazione.html"/>
+            	</item>
             </item>
-            <item name="Deployment" href="/implementazione.html"/>
+            <item name="Implementazione" href="/implementazione.html">
+            	<item name="Creazione del progetto" href="implementazione/impl_00.html"/>
+				<item name="Caso d'uso UC01" href="implementazione/UC01/impl_uc01.html">
+					<item name="Una prima soluzione" href="implementazione/UC01/impl_01.html" />
+				</item>
+            </item>
             <item name="Esecuzione" href="/esecuzione.html"/>
         </menu>
 		<menu name="Code">

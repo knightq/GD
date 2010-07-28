@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  body: MyText
+  creator_id: 1
+  revisor_id: 1
+  expire_on: 2010-07-28
+
+two:
+  body: MyText
+  creator_id: 1
+  revisor_id: 1
+  expire_on: 2010-07-28

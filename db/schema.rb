@@ -9,6 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20100728150014) do
+
+  create_table "documents", :force => true do |t|
+    t.text     "body"
+    t.integer  "creator_id", :precision => 38, :scale => 0
+    t.integer  "revisor_id", :precision => 38, :scale => 0
+    t.datetime "expire_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "editors", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

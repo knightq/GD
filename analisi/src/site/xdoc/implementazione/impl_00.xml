@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
+<document> 
+  <properties>
+    <title>Creazione del progetto</title>
+    <author email="asalicetti@kion.it">Andrea Salicetti</author>
+  </properties>
+  <body>
+		<p>
+			In questa sezione mostreremo come implementare il progetto con Rails.
+ 		</p>
+		<p>
+			Nell'affrontare il compito, si applicherà il principio <i>divide et impera</i>, abbracciando un approccio di sviluppo prototipale e agile, che ben si adatta alle caratteristiche di Rails (o sarebbe meglio dire che Rails supporta molto bene).
+		</p>
+	<section name="Creazione di un nuovo progetto">
+  	<p>
+  		Prima di tutto, poniamo le basi del nostro progetto.
+  	</p>
+	<p>
+		Rails, analogamente ad altri framework di gestione dei progetti (ad es. Maven), ma in modo decisamente più costrittivo, impone la struttura che ogni progetto deve avere<a href="/faq_rails.html#project-structure"><span class="faq"/></a>.
+	</p>
+		<p>
+			Per facilitare il rispetto delle convenzioni proposte, Rails fornisce come supporto agli sviluppatori una serie di <i>generatori</i> di codice, che servono a produrre automaticamente uno scheletro di codice / risorse da cui partire con lo sviluppo vero e proprio.<br/>
+			Ne usiamo per la prima volta uno di questi, proprio per creare la struttura della nuova applicazione.
+		</p>
+		<p>
+			Vogliamo creare una nuova applicazione Rails di nome <b>GD</b>, che si appoggerà ad una base dati Oracle:
+		</p>
+		<div class="console">
+			rails new GD -d oracle
+		</div>
+		<p>Dopo una serie di messaggi in console, nella cartella da cui abbiamo lanciato il comando, troveremo una nuova sottocartella chiamata <b>GD</b>, entriamoci: <u>d'ora in avanti questa cartella, radice della nostra applicazione, sarà la base per il lancio di tutti i futuri script</u>.</p>
+		<subsection name="Configurazione DB">
+			<p>Un minimo di configurazione ci vuole:</p>
+			<div class="filename">config/database.yml</div>
+			<table class="CodeRay" style="width: 50%;">
+				<tr>
+				  <td class="line_numbers" width="5%"><pre><a href="#n1" name="n1">1</a>
+<a href="#n2" name="n2">2</a>
+<a href="#n3" name="n3">3</a>
+<a href="#n4" name="n4">4</a>
+<a href="#n5" name="n5">5</a>
+<a href="#n6" name="n6">6</a>
+<a href="#n7" name="n7">7</a>
+<a href="#n8" name="n8">8</a>
+<a href="#n9" name="n9">9</a>
+<a href="#n10" name="n10">10</a>
+<a href="#n11" name="n11">11</a>
+<a href="#n12" name="n12">12</a>
+<a href="#n13" name="n13">13</a>
+<a href="#n14" name="n14">14</a>
+<a href="#n15" name="n15">15</a>
+<a href="#n16" name="n16">16</a>
+<a href="#n17" name="n17">17</a></pre></td>
+				<td class="code" width="95%">
+					<pre><span title="Key" class="ke">development:</span> 
+  <span title="Key" class="ke">adapter</span><span title="Operator">:</span> <span title="String" class="s">oracle<span class="highlight">_enhanced</span></span>
+  <span title="Key" class="ke">database</span><span title="Operator">:</span> <span title="String" class="highlight">SIASVIL</span>
+  <span title="Key" class="ke">username</span><span title="Operator">:</span> <span title="String" class="highlight">asal_gd_development</span>
+  <span title="Key" class="ke">password</span><span title="Operator">:</span> <span title="String" class="highlight">asal_gd_development</span>
+
+<span title="Key" class="ke">test</span><span title="Operator">:</span>
+  <span title="Key" class="ke">adapter</span><span title="Operator">:</span> <span title="String" class="s">oracle<span class="highlight">_enhanced</span></span>
+  <span title="Key" class="ke">database</span><span title="Operator">:</span> <span title="String" class="highlight">SIASVIL</span>
+  <span title="Key" class="ke">username</span><span title="Operator">:</span> <span title="String" class="highlight">asal_gd_test</span>
+  <span title="Key" class="ke">password</span><span title="Operator">:</span> <span title="String" class="highlight">asal_gd_test</span>
+
+<span title="Key" class="ke">production</span><span title="Operator">:</span>
+  <span title="Key" class="ke">adapter</span><span title="Operator">:</span> <span title="String" class="s">oracle<span class="highlight">_enhanced</span></span>
+  <span title="Key" class="ke">database</span><span title="Operator">:</span> <span title="String" class="highlight">SIASVIL</span>
+  <span title="Key" class="ke">username</span><span title="Operator">:</span> <span title="String" class="highlight">asal_gd_production</span>
+  <span title="Key" class="ke">password</span><span title="Operator">:</span> <span title="String" class="highlight">asal_gd_production</span></pre></td>
+</tr></table>
+			
+		</subsection>
+</section>
+	<navbar home="../implementazione.html" next="UC01/impl_uc01.html"/>
+  </body>
+</document>

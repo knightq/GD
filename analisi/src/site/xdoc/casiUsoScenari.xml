@@ -11,7 +11,12 @@
  
     <subsection name="Casi d'uso">
     <p>
+    	In prima istanza e ad alto livello, le interazioni fra gli attori e il sistema sono riassumibili dal seguente diagramma UC:  
     </p>
+	<div class="img" >
+		<img src="images/UC0.png" alt="Casi d'uso - Visione globale."/>
+		<div class="title"><b>[Fig.1]</b> Casi d'uso - Visione globale.</div>
+	</div>
     </subsection>
             
             <subsection name="Scenari">            

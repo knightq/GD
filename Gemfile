@@ -20,6 +20,7 @@ gem 'i18n'
 gem 'rspec', :group => :test
 
 group :development do
+   gem "nifty-generators"
    gem 'hirb'
 end
 

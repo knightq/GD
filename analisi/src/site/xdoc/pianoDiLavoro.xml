@@ -1,12 +1,18 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style/MavenView.xsl"?>
 <document> 
   <properties>
-    <title>Pianalisio di lavoro</title>
+    <title>Piano di lavoro</title>
     <author email="asalicetti@kion.it">Andrea Salicetti</author>
   </properties>
   <body>
-    <section name="Pianalisio di lavoro">
+    <section name="Piano di lavoro">
+    	<p>
+    		Al fine di minimizzare i tempi di sviluppo, si seguirà un approccio agile a prototipazione rapida. 
+    	</p>
+		<p>
+			Alla luce degli <a href="obiettivi.html#obiettivi_secondari">obiettivi secondari</a> e della <a href="visione.html">visione</a>, la documentazione relativa all'implementazione sarà molto dettagliata affinché possa avere uno scopo didattico nel processo di apprendimento allo sviluppo in Rails 3.
+		</p>
     </section>
   </body>
 </document>

@@ -91,6 +91,8 @@ GEM
       treetop (>= 1.4.5)
     mime-types (1.16)
     mime-types (1.16)
+    nifty-generators (0.4.0)
+    nifty-generators (0.4.0)
     polyglot (0.3.1)
     polyglot (0.3.1)
     rack (1.1.0)
@@ -169,6 +171,7 @@ DEPENDENCIES
   hirb
   i18n
   jrails
+  nifty-generators
   rails (= 3.0.0.beta4)
   rdiscount
   rspec

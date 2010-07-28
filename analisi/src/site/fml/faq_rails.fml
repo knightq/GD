@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faqs xmlns="http://maven.apache.org/FML/1.0.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/FML/1.0.1 http://maven.apache.org/xsd/fml-1.0.1.xsd"
+  title="Domande e risposte su Ruby on Rails"
+  toplink="false">
+
+  <part id="CoC">
+    <title>Convention over Configuartion</title>
+
+    <faq id="CoC">
+      <question>
+        Cosa significa Convention over Configuration?
+      </question>
+      <answer>
+			<p>E' uno dei pattern strutturali applicati dal framework Ruby on Rails per semplificare il lavoro degli sviluppatori.</p>
+			<p>Il concetto di base è quello di definire un insieme di scelte di default per tutti i progetti.</p>
+      </answer>
+    </faq>
+
+    <faq id="project-structure">
+      <question>
+        Perché mi si viene a dire come devo organizzare i miei progetti?
+      </question>
+      <answer>
+			<p>
+				Un framework mal progettato spesso ha bisogno di più file di configurazione, spesso complicati e con molte impostazioni da scegliere.<br/>
+				Tipicamente queste impostazioni forniscono informazioni specifiche per ciascun progetto, che vanno dalla gestione del routing degli URL, alle metodologie di mapping tra classi e tabelle del database.<br/>
+				Un gran numero di file di configurazione con troppi parametri è spesso indice di una progettazione inutilmente complessa.</p>
+			<p>
+Per esempio, le prime versioni del noto ORM per Java Hibernate mappava le entità e i loro campi sul database descrivendo queste relazioni in un file XML.<br/>
+			 La maggior parte di queste informazioni si sarebbe potuta inferire per convenzione, mappando le classi in tabelle dallo stesso nome e i nomi delle proprietà della classe con i nomi dei campi della tabella.<br/>
+			 Le versioni successive hanno eliminato questo file di configurazione XML e si sono appoggiate molto su questo genere di convenzioni, pur preservando la libertà del singolo progettista di deviare da queste, attraverso l'uso di annotazioni Java sulle classi di modello.</p>
+			 <p>Tutto ciò che segue la convenzione, è codice in meno che lo sviluppatore non deve scrivere.</p>
+			 <p>Non solo; esiste una seconda motivazione altrettanto importante che suggerisce l'utilizzo di convenzioni come regola aurea nello sviluppo di applicazioni (non solo web).</p>
+			 <p>L'utilizzo di convenzioni, rende i progetti più aperti ai contributi di nuovi sviluppatori, minimizzando i tempi richiesti alla comprensione della struttura dell'applicazione stessa.</p>
+      </answer>
+    </faq>
+  </part>
+
+  <part id="DRY">
+    <title>Don't Repeat Yourself</title>
+
+    <faq id="project-structure">
+      <question>
+      
+      </question>
+      <answer>
+		<p></p>
+      </answer>
+    </faq>
+  </part>
+
+  <part id="install">
+    <title>Installation</title>
+
+    <faq id="how-install">
+      <question>
+        How do I install Foo?
+      </question>
+      <answer>
+        <p>some markup goes here</p>
+      </answer>
+    </faq>
+
+  </part>
+
+</faqs>

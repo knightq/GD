@@ -19,5 +19,10 @@
 			della opzione <i>make</i> con infrastruttura Rails nel contesto di scelta <i>make or buy</i> circa l'adozione di un sistema informatico di gestione documentale.
 		</p>
     </section>
+	<section name="Obiettivi secondari">
+		<p>
+ 			Il progetto si propone di fornire un supporto didattico per imparare a sviluppare progetti in Rails 3. 
+		</p>
+    </section>
   </body>
 </document>
